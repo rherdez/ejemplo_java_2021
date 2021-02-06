@@ -9,7 +9,7 @@ package pkg2021_cuarto;
  *
  * @author rober
  */
-public class mouse {
+public class mouse extends periferico{
     
     
     
