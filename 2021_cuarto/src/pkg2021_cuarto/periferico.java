@@ -11,8 +11,9 @@ package pkg2021_cuarto;
  */
 public class periferico {
     
-    public periferico(String n){
+    public periferico(String n, boolean e){
         nombre=n;
+        entrada=e;
     }
     String nombre;
     boolean entrada;

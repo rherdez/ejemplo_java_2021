@@ -14,13 +14,14 @@ package pkg2021_cuarto;
 public class mouse extends periferico{
      
    public mouse(){
-       super("n");
+       super("n",true);
    }
     
     public mouse(String c, String nom){
-        super(nom);
+        super(nom,true);
         color=c;
         peso=0;
+  
         
     }
     private String color;
