@@ -21,10 +21,10 @@ public class Main {
     static Scanner sc=new Scanner(System.in);
     static void agregar(){
         mouse m=new mouse();
-        String x;
+    
             System.out.println("Ingrese Nombre: ");
             m.setNombre(sc.next());
-            x=sc.next();
+        
             System.out.println("Ingrese Color: ");
             m.setColor(sc.next());
             System.out.println("Ingrese Peso: ");
@@ -45,6 +45,29 @@ public class Main {
             System.out.println("Entrada"+grupo.get(i).Delmer_Entrada());
         }
     }
+    static void buscar(){
+        
+        String b;
+        boolean encontrado=false;
+        System.out.println("Ingrese Nombre a Buscar:");
+        b=sc.next();
+        
+        for(int i=0;i<grupo.size();i++){
+            if(grupo.get(i).getNombre().equals(b)){
+                System.out.println((i+1)+"==============================================");
+                System.out.println("Nombre: "+grupo.get(i).getNombre());
+                System.out.println("Color: "+grupo.get(i).getColor());
+                System.out.println("Peso: "+grupo.get(i).getpeso());
+                System.out.println("Entrada"+grupo.get(i).Delmer_Entrada());
+                encontrado=true;
+                i=grupo.size();
+            }
+        }
+        
+        if(!encontrado){
+            System.out.println("NOMBRE no existe");
+        }
+    }
     public static void main(String[] args) {
         // TODO code application logic here
         int op;
@@ -53,6 +76,7 @@ public class Main {
             System.out.println("Menu");
             System.out.println("1) Agregar");
             System.out.println("2) Presentar");
+            System.out.println("3) Buscar");
             System.out.println("0) Salir");
             op=sc.nextInt();
             
@@ -63,6 +87,9 @@ public class Main {
                 case 2:
                         presentar();
                         break;
+                case 3:
+                        buscar();
+                         break;
                 case 0:
                     break;
                 default:
