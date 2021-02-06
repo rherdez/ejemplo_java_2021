@@ -10,38 +10,66 @@ package pkg2021_cuarto;
  * @author rober
  */
 import java.util.Scanner;
+import java.util.ArrayList;
+
 public class Main {
 
     /**
      * @param args the command line arguments
      */
- 
+    static ArrayList<mouse> grupo=new ArrayList<mouse>();
+    static Scanner sc=new Scanner(System.in);
+    static void agregar(){
+        mouse m=new mouse();
+        String x;
+            System.out.println("Ingrese Nombre: ");
+            m.setNombre(sc.next());
+            x=sc.next();
+            System.out.println("Ingrese Color: ");
+            m.setColor(sc.next());
+            System.out.println("Ingrese Peso: ");
+            m.setpeso(sc.nextInt());
+
+        grupo.add(m);
+        
+    }
+    
+    static void presentar(){
+        
+        for(int i=0;i<grupo.size();i++){
+            System.out.println("");
+            System.out.println((i+1)+"==============================================");
+            System.out.println("Nombre: "+grupo.get(i).getNombre());
+            System.out.println("Color: "+grupo.get(i).getColor());
+            System.out.println("Peso: "+grupo.get(i).getpeso());
+            System.out.println("Entrada"+grupo.get(i).Delmer_Entrada());
+        }
+    }
     public static void main(String[] args) {
         // TODO code application logic here
-        mouse []x=new mouse[2];
-          
-        x[0]=new mouse();
-        x[0].setColor("Negro");
-        x[0].setpeso(12);
-        x[0].setNombre("Mouse");
-        x[0].setEntrada(true);
+        int op;
         
-        System.out.println("Color: "+x[0].getColor());
-        System.out.println("Peso: "+x[0].getpeso());
-        System.out.println("Nombre: "+x[0].getNombre());
-        System.out.println("Entrada: "+x[0].Delmer_Entrada());
-        
-        x[1]=new mouse("x","y");
-     //   x[1].setColor("Azul");
-        x[1].setpeso(16);
-        //x[1].setNombre("Mouse");
-        x[1].setEntrada(true);
-        
-        
-       System.out.println("Color: "+x[1].getColor());
-       System.out.println("Peso: "+x[1].getpeso());
-       System.out.println("Nombre: "+x[1].getNombre());
-       System.out.println("Entrada: "+x[1].Delmer_Entrada());
+        do{
+            System.out.println("Menu");
+            System.out.println("1) Agregar");
+            System.out.println("2) Presentar");
+            System.out.println("0) Salir");
+            op=sc.nextInt();
+            
+            switch(op){
+                case 1:
+                       agregar();
+                       break;
+                case 2:
+                        presentar();
+                        break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
+            }
+        }while(op!=0);
+    
     }
     
 }
