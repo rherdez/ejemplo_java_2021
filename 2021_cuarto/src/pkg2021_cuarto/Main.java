@@ -18,6 +18,16 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         mouse []x=new mouse[2];
+        periferico p=new periferico();
+        p.setEntrada(true);
+        p.setNombre("mouse");
+        
+        System.out.println("Entrada: "+p.Delmer_Entrada());
+        System.out.println("Nombre: "+p.getNombre());
+        
+        
+        
+        
         x[0]=new mouse();
         x[0].setColor("Negro");
         x[0].setpeso(12);
