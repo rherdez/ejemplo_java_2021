@@ -10,6 +10,10 @@ package pkg2021_cuarto;
  * @author rober
  */
 public class periferico {
+    
+    public periferico(String n){
+        nombre=n;
+    }
     String nombre;
     boolean entrada;
 

@@ -15,14 +15,11 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+ 
     public static void main(String[] args) {
         // TODO code application logic here
         mouse []x=new mouse[2];
-       
-        
-        
-        
-        
+          
         x[0]=new mouse();
         x[0].setColor("Negro");
         x[0].setpeso(12);
@@ -34,10 +31,10 @@ public class Main {
         System.out.println("Nombre: "+x[0].getNombre());
         System.out.println("Entrada: "+x[0].Delmer_Entrada());
         
-        x[1]=new mouse();
-        x[1].setColor("Azul");
+        x[1]=new mouse("x","y");
+     //   x[1].setColor("Azul");
         x[1].setpeso(16);
-        x[1].setNombre("Mouse");
+        //x[1].setNombre("Mouse");
         x[1].setEntrada(true);
         
         
