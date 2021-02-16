@@ -136,6 +136,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         AP formulario=new AP();
         this.jDesktopPane1.add(formulario);
+        AP.JDP= this.jDesktopPane1;
         formulario.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
