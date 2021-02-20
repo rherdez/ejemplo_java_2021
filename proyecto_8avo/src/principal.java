@@ -46,6 +46,8 @@ public class principal extends javax.swing.JFrame {
         setTitle("Principal");
         setExtendedState(6);
 
+        jDesktopPane1.setForeground(new java.awt.Color(0, 0, 204));
+
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
