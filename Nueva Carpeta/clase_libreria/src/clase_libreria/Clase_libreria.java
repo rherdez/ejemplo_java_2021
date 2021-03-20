@@ -67,5 +67,21 @@ public String URL="jdbc:sqlite:C:/textos/db_estudiante.db";
             JOptionPane.showMessageDialog(null, ex.getMessage().toString());
         }               
      }
+          public ResultSet Seleccionar2(String sql){
+           ResultSet rs=null;
+           
+      
+        PreparedStatement st;
+        try {
+            st = con.prepareStatement(sql);
+            rs=st.executeQuery();
+            
+                         
+           
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage().toString());
+        }
+        return rs;
+     }
     
 }
