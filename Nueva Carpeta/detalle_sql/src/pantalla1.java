@@ -79,7 +79,7 @@ public class pantalla1 extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Borrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -209,10 +209,7 @@ public class pantalla1 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        int x=this.jTable1.getSelectedRow();
-        
-        
-        
+        int x=this.jTable1.getSelectedRow();                        
            abrir();
         String sql="delete from estudiante where id="+this.jTable1.getValueAt(x, 0).toString();
         try {
